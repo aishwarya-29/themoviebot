@@ -26,12 +26,14 @@ bot.onText(/\/movie(.+)/, function (msg,match){
             var res = JSON.parse(body);
             var ratings = res.Ratings;
             var rat = [];
-            ratings.forEach(element => {
-                rat.push([element.Source,element.Value]);
-            });
             var str = "";
-            for(var i=0;i<rat.length;i++) {
-                str+= rat[i][0] + ": " + rat[i][1] + "\n";
+            if(ratings) {
+                ratings.forEach(element => {
+                    rat.push([element.Source,element.Value]);
+                });
+                for(var i=0;i<rat.length;i++) {
+                    str+= rat[i][0] + ": " + rat[i][1] + "\n";
+                }
             }
             bot.sendMessage(chatID,"*Runtime*: " + res.Runtime + "\n*Genre*: " + res.Genre + "\n*Plot*: " + res.Plot + "\n*Ratings*:\n" + str + "IMDB: " + res.imdbRating,{parse_mode:'Markdown'});
             bot.sendPhoto(chatID,res.Poster);
