@@ -1,0 +1,22 @@
+{
+  "name": "the-movie-bot",
+  "version": "1.0.0",
+  "description": "suggest similar movies",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "movie",
+    "suggetions",
+    "bot",
+    "telegram"
+  ],
+  "author": "Aishwarya",
+  "license": "ISC",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.50.0",
+    "request": "^2.88.2"
+  }
+}
