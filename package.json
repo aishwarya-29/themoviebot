@@ -16,6 +16,7 @@
   "author": "Aishwarya",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "node-telegram-bot-api": "^0.50.0",
     "request": "^2.88.2"
   }
